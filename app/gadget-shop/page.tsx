@@ -85,7 +85,7 @@ export default function GadgetShopPage() {
       </div>
 
       {/* HERO */}
-      <section className="relative overflow-hidden pt-32">
+      <section className="hero-section relative overflow-hidden pt-32">
 
         <div className="relative mx-auto max-w-7xl px-6 pb-24 lg:px-8">
 
@@ -103,13 +103,13 @@ export default function GadgetShopPage() {
               </div>
 
               <h1 className="text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-                Technology for
-                <span className="block bg-linear-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
+                Gadgets for
+                <span className="hero-gradient block bg-linear-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
                   everyday life.
                 </span>
               </h1>
 
-              <p className="mt-7 max-w-xl text-lg leading-8 text-white/55">
+              <p className="hero-copy mt-7 max-w-xl text-lg leading-8 text-white/55">
                 Discover smartphones, laptops, tablets, smart devices,
                 accessories and other gadgets selected to make your digital
                 life easier.
@@ -177,7 +177,7 @@ export default function GadgetShopPage() {
 
               <div className="absolute left-1/2 top-1/2 h-100 w-100 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-[110px]" />
 
-              <div className="relative mx-auto max-w-140 overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-blue-500/10">
+              <div className="hero-media relative mx-auto max-w-140 overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-blue-500/10">
 
                 <div className="relative h-117.5 overflow-hidden rounded-[28px]">
 
@@ -192,13 +192,13 @@ export default function GadgetShopPage() {
 
                   <div className="absolute inset-0 bg-linear-to-t from-[#050816] via-transparent to-transparent" />
 
-                  <div className="absolute bottom-7 left-7 right-7">
+                  <div className="absolute bottom-10 left-7 right-7">
 
                     <p className="text-xs font-bold tracking-[0.25em] text-cyan-300">
                       GADGETS & DEVICES
                     </p>
 
-                    <h2 className="mt-2 text-3xl font-bold">
+                    <h2 className="mt-2 mb-2 text-3xl font-bold">
                       Upgrade your everyday.
                     </h2>
 
@@ -208,7 +208,7 @@ export default function GadgetShopPage() {
 
               </div>
 
-              <div className="absolute -bottom-6 -left-4 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-4 shadow-2xl backdrop-blur-xl sm:left-0">
+              <div className="hero-panel absolute -bottom-6 -left-4 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-4 shadow-2xl backdrop-blur-xl sm:left-0">
 
                 <p className="text-xs text-white/40">
                   Shopping made simple
@@ -297,16 +297,12 @@ export default function GadgetShopPage() {
 
           {/* LOADING */}
           {loading && (
-
             <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
               {[1, 2, 3, 4, 5, 6].map((item) => (
-
                 <div
                   key={item}
                   className="overflow-hidden rounded-3xl border border-white/10 bg-white/3"
                 >
-
                   <div className="h-64 animate-pulse bg-white/5" />
 
                   <div className="space-y-4 p-7">
@@ -318,18 +314,14 @@ export default function GadgetShopPage() {
                     <div className="h-10 animate-pulse rounded bg-white/5" />
 
                   </div>
-
                 </div>
-
               ))}
-
             </div>
 
           )}
 
           {/* EMPTY */}
           {!loading && filteredProducts.length === 0 && (
-
             <div className="mt-14 rounded-3xl border border-white/10 bg-white/3 p-12 text-center">
 
               <div className="text-4xl">
@@ -360,18 +352,17 @@ export default function GadgetShopPage() {
 
           {/* PRODUCT GRID */}
           {!loading && filteredProducts.length > 0 && (
-
-            <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
 
               {filteredProducts.map((product) => (
 
                 <div
                   key={product.id}
-                  className="group overflow-hidden rounded-3xl border border-white/10 bg-white/3 transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-white/6"
+                  className="group overflow-hidden rounded-2xl border border-white/10 bg-white/3 transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-white/6 sm:rounded-3xl"
                 >
 
                   {/* IMAGE */}
-                  <div className="relative h-72 overflow-hidden bg-[#0b1125]">
+                  <div className="relative h-52 overflow-hidden bg-[#0b1125] sm:h-72">
 
                     {product.image_url ? (
 
@@ -409,7 +400,7 @@ export default function GadgetShopPage() {
                     {/* CATEGORY */}
                     {product.category && (
 
-                      <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/50 px-3 py-1 text-[10px] font-semibold tracking-widest backdrop-blur">
+                      <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/50 px-3 py-1 text-rose-50 text-[10px] font-semibold tracking-widest backdrop-blur">
                         {product.category}
                       </span>
 
@@ -431,26 +422,26 @@ export default function GadgetShopPage() {
                   </div>
 
                   {/* CONTENT */}
-                  <div className="p-7">
+                  <div className="p-4 sm:p-7">
 
-                    <h3 className="text-xl font-bold">
+                    <h3 className="text-base font-bold sm:text-xl">
                       {product.name}
                     </h3>
 
                     {product.description && (
 
-                      <p className="mt-3 min-h-18 text-sm leading-6 text-white/45">
+                      <p className="mt-2 text-xs leading-5 text-white/45 sm:mt-3 sm:min-h-18 sm:text-sm sm:leading-6">
                         {product.description}
                       </p>
 
                     )}
 
                     {/* PRICE */}
-                    <div className="mt-6">
+                    <div className="mt-4 sm:mt-6">
 
                       {product.price !== null ? (
 
-                        <p className="text-lg font-bold text-cyan-300">
+                        <p className="text-base font-bold text-cyan-300 sm:text-lg">
                           {product.currency === "NGN"
                             ? `₦${Number(product.price).toLocaleString(
                                 "en-NG"
@@ -462,7 +453,7 @@ export default function GadgetShopPage() {
 
                       ) : (
 
-                        <p className="text-sm font-semibold text-cyan-300">
+                        <p className="text-xs font-semibold text-cyan-300 sm:text-sm">
                           Ask for Price
                         </p>
 
@@ -471,9 +462,9 @@ export default function GadgetShopPage() {
                     </div>
 
                     {/* ACTION */}
-                    <div className="mt-6 flex items-center justify-between gap-3">
+                    <div className="mt-4 flex items-center justify-between gap-2 sm:mt-6 sm:gap-3">
 
-                      <span className="text-xs text-white/30">
+                      <span className="text-[10px] text-white/30 sm:text-xs">
                         {product.is_available
                           ? "Ready to order"
                           : "Currently unavailable"}
@@ -485,7 +476,7 @@ export default function GadgetShopPage() {
                           href={getWhatsAppLink(product)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-full bg-linear-to-r from-blue-500 to-cyan-400 px-4 py-2 text-xs font-bold transition hover:-translate-y-0.5"
+                          className="rounded-full bg-linear-to-r from-blue-500 to-cyan-400 px-3 py-2 text-[10px] font-bold transition hover:-translate-y-0.5 sm:px-4 sm:text-xs"
                         >
                           WhatsApp →
                         </a>

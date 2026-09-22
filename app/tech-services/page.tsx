@@ -68,11 +68,11 @@ export default function TechServicesPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#050816] text-white">
       {/* HERO */}
-      <section className="relative overflow-hidden pt-32">
+      <section className="hero-section relative overflow-hidden pt-32">
         {/* Background glow */}
-        <div className="absolute left-1/3 top-20 h-[500px] w-[500px] rounded-full bg-blue-600/15 blur-[130px]" />
+        <div className="absolute left-1/3 top-20 h-125 w-125 rounded-full bg-blue-600/15 blur-[130px]" />
 
-        <div className="absolute right-0 top-1/2 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[120px]" />
+        <div className="absolute right-0 top-1/2 h-100 w-100 rounded-full bg-cyan-500/10 blur-[120px]" />
 
         <div className="relative mx-auto max-w-7xl px-6 pb-24 lg:px-8">
           <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -88,12 +88,12 @@ export default function TechServicesPage() {
 
               <h1 className="text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
                 Technology that
-                <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
+                <span className="hero-gradient block bg-linear-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
                   moves your ideas forward.
                 </span>
               </h1>
 
-              <p className="mt-7 max-w-xl text-lg leading-8 text-white/55">
+              <p className="hero-copy mt-7 max-w-xl text-lg leading-8 text-white/55">
                 We design and build modern digital experiences, applications
                 and software solutions that help individuals and businesses
                 turn ideas into reality.
@@ -104,7 +104,7 @@ export default function TechServicesPage() {
                   href="https://wa.me/2348139498576?text=Hello%20GB%20Global%20Services%2C%20I%20need%20a%20tech%20service."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 px-7 py-4 text-center text-sm font-bold shadow-xl shadow-blue-500/20 transition hover:-translate-y-1"
+                  className="rounded-full bg-linear-to-r from-blue-500 to-cyan-400 px-7 py-4 text-center text-sm font-bold shadow-xl shadow-blue-500/20 transition hover:-translate-y-1"
                 >
                   Start a Project →
                 </a>
@@ -120,13 +120,13 @@ export default function TechServicesPage() {
 
             {/* Visual */}
             <div className="relative">
-              <div className="relative mx-auto max-w-[560px]">
+              <div className="relative mx-auto max-w-140">
                 {/* Glow */}
-                <div className="absolute left-1/2 top-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-[100px]" />
+                <div className="absolute left-1/2 top-1/2 h-87.5 w-87.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-[100px]" />
 
                 {/* Main image */}
-                <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-blue-500/10">
-                  <div className="relative h-[420px] overflow-hidden rounded-[24px]">
+                <div className="hero-media relative overflow-hidden rounded-4xl border border-white/10 bg-white/5 p-3 shadow-2xl shadow-blue-500/10">
+                  <div className="relative h-105 overflow-hidden rounded-3xl">
                     <Image
                       src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop"
                       alt="Technology development workspace"
@@ -136,9 +136,9 @@ export default function TechServicesPage() {
                       className="object-cover"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/90 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#050816]/90 via-transparent to-transparent" />
 
-                    <div className="absolute bottom-6 left-6 right-6">
+                    <div className="absolute bottom-10 left-6 right-6">
                       <p className="text-xs font-semibold tracking-[0.2em] text-cyan-300">
                         DIGITAL SOLUTIONS
                       </p>
@@ -151,7 +151,7 @@ export default function TechServicesPage() {
                 </div>
 
                 {/* Floating card */}
-                <div className="absolute -bottom-7 -left-4 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-4 shadow-2xl backdrop-blur-xl sm:left-0">
+                <div className="hero-panel absolute -bottom-7 -left-4 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-4 shadow-2xl backdrop-blur-xl sm:left-0">
                   <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 text-xl">
                       {"</>"}
@@ -165,7 +165,7 @@ export default function TechServicesPage() {
                 </div>
 
                 {/* Floating card */}
-                <div className="absolute -right-3 -top-5 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-4 shadow-2xl backdrop-blur-xl sm:right-0">
+                <div className="hero-panel absolute -right-3 -top-5 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-4 shadow-2xl backdrop-blur-xl sm:right-0">
                   <p className="text-xs text-white/40">Our Focus</p>
 
                   <p className="mt-1 text-sm font-bold">
@@ -212,7 +212,7 @@ export default function TechServicesPage() {
                 className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-white/[0.06]"
               >
                 {/* Image */}
-                <div className="relative h-56 overflow-hidden">
+                <div className="hero-media relative h-56 overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -221,7 +221,7 @@ export default function TechServicesPage() {
                     className="object-cover transition duration-700 group-hover:scale-110"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#050816] via-transparent to-transparent" />
 
                   <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-bold tracking-widest backdrop-blur">
                     {service.number}

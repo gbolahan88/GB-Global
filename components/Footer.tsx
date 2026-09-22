@@ -13,7 +13,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#03050f]">
+    <footer className="site-footer border-t border-white/10 bg-[#03050f]">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
@@ -25,7 +25,7 @@ export default function Footer() {
                 alt="GB Global logo"
                 width={300}
                 height={300}
-                className="h-auto w-autoobject-cover"
+                className="theme-logo h-auto w-auto object-cover"
               />
             </div>
 

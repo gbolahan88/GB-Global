@@ -158,9 +158,7 @@ export default function AdminGadgetsPage() {
     updateField("image_url", "");
   }
 
-  /* =========================================================
-     EDIT / RESET
-  ========================================================= */
+  /* ============== EDIT / RESET ======================= */
 
   function startEdit(gadget: Gadget) {
     setEditingId(gadget.id);
@@ -196,9 +194,7 @@ export default function AdminGadgetsPage() {
     setImagePreview(null);
   }
 
-  /* =========================================================
-     SUBMIT
-  ========================================================= */
+  /* ==============SUBMIT================= */
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -267,18 +263,34 @@ export default function AdminGadgetsPage() {
     setSaving(false);
   }
 
+  function handlePermissionError(error: { code?: string; message?: string }) {
+    if (error.code === "42501") {
+      alert(
+        "Permission denied: your signed-in account cannot update the gadgets table. Add a Supabase RLS policy that allows admin users to update public.gadgets."
+      );
+      return;
+    }
+
+    alert(error.message || "Unable to update product.");
+  }
+
   async function toggleAvailability(gadget: Gadget) {
     const { error } = await supabase
       .from("gadgets")
       .update({
         is_available: !gadget.is_available,
-        updated_at: new Date().toISOString(),
       })
       .eq("id", gadget.id);
 
     if (error) {
-      console.error(error);
-      alert("Unable to update product.");
+      console.error("Toggle availability error:", {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code,
+      });
+
+      handlePermissionError(error);
       return;
     }
 

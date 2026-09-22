@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "GB Global Services LTD | Technology • Trade • Solutions",
   description:
     "GB Global Services LTD provides technology solutions, automobiles, mobile devices, pet trading, exchange services, and other business solutions.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +28,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => { try { const saved = localStorage.getItem("gb-global-theme"); const system = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.dataset.theme = saved === "light" || saved === "dark" ? saved : system; } catch {} })();`,
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-[#050816]">
         <AppShell>{children}</AppShell>
       </body>

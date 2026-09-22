@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import ThemeToggle from "@/components/ThemeToggle";
 
 type DashboardStats = {
   exchangeRates: number;
@@ -282,25 +283,27 @@ export default function AdminDashboard() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050816] text-white">
+    <main className="admin-shell min-h-screen bg-[#050816] text-white">
 
       {/* TOP BAR */}
-      <header className="border-b border-white/10 bg-[#070b1b]/90 backdrop-blur-xl">
+      <header className="admin-topbar border-b border-white/10 bg-[#070b1b]/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-6">
 
           <div>
-            <p className="text-lg font-black tracking-tight">
+            <p className="admin-brand text-lg font-black tracking-tight">
               GB GLOBAL
             </p>
 
-            <p className="text-[10px] tracking-[0.25em] text-cyan-400">
+            <p className="admin-subtitle text-[10px] tracking-[0.25em] text-cyan-400">
               ADMINISTRATION
             </p>
           </div>
 
           <div className="flex items-center gap-4">
 
-            <div className="hidden text-right sm:block">
+            <ThemeToggle />
+
+            <div className="admin-user hidden text-right sm:block">
               <p className="text-sm font-semibold">
                 Administrator
               </p>
@@ -318,7 +321,7 @@ export default function AdminDashboard() {
               type="button"
               onClick={handleLogout}
               disabled={loggingOut}
-              className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white/70 transition hover:border-red-400/30 hover:bg-red-400/10 hover:text-red-300 disabled:cursor-not-allowed disabled:opacity-50"
+              className="admin-logout-button flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white/70 transition hover:border-red-400/30 hover:bg-red-400/10 hover:text-red-300 disabled:cursor-not-allowed disabled:opacity-50"
             >
               <span>{loggingOut ? "…" : "⏻"}</span>
 
@@ -487,7 +490,7 @@ export default function AdminDashboard() {
 
 
           {/* STATS */}
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 xl:grid-cols-4">
 
             {statCards.map((stat) => {
 
@@ -495,7 +498,7 @@ export default function AdminDashboard() {
                 <>
                   <div className="flex items-start justify-between">
 
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 text-xl">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-500/10 text-base sm:h-11 sm:w-11 sm:text-xl">
                       {stat.icon}
                     </div>
 
@@ -515,15 +518,15 @@ export default function AdminDashboard() {
                     </>
                   ) : (
                     <>
-                      <p className="mt-6 text-3xl font-black">
+                      <p className="mt-4 text-xl font-black sm:mt-6 sm:text-3xl">
                         {stat.value}
                       </p>
 
-                      <p className="mt-1 text-sm text-white/35">
+                      <p className="mt-1 text-[10px] text-white/35 sm:text-sm">
                         {stat.title}
                       </p>
 
-                      <p className="mt-2 text-xs text-white/20">
+                      <p className="mt-1 text-[9px] leading-4 text-white/20 sm:mt-2 sm:text-xs">
                         {stat.description}
                       </p>
                     </>
@@ -536,7 +539,7 @@ export default function AdminDashboard() {
                   <Link
                     key={stat.title}
                     href={stat.href}
-                    className="group rounded-2xl border border-white/10 bg-white/3 p-6 transition hover:border-blue-400/20 hover:bg-white/5"
+                    className="group rounded-2xl border border-white/10 bg-white/3 p-3 transition hover:border-blue-400/20 hover:bg-white/5 sm:p-6"
                   >
                     {content}
                   </Link>
@@ -546,7 +549,7 @@ export default function AdminDashboard() {
               return (
                 <div
                   key={stat.title}
-                  className="rounded-2xl border border-white/10 bg-white/3 p-6 transition hover:border-blue-400/20"
+                  className="rounded-2xl border border-white/10 bg-white/3 p-3 transition hover:border-blue-400/20 sm:p-6"
                 >
                   {content}
                 </div>

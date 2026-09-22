@@ -81,8 +81,7 @@ export default function AutomobilesPage() {
     <main className="min-h-screen overflow-hidden bg-[#050816] text-white">
 
       {/* HERO */}
-      <section className="relative overflow-hidden pt-32">
-
+      <section className="hero-section relative overflow-hidden pt-32">
         <div className="absolute left-1/4 top-10 h-125 w-125 rounded-full bg-blue-600/15 blur-[140px]" />
 
         <div className="absolute right-0 top-1/3 h-112.5 w-112.5 rounded-full bg-cyan-500/10 blur-[120px]" />
@@ -107,13 +106,13 @@ export default function AutomobilesPage() {
               <h1 className="text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
 
                 Drive something
-                <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
+                <span className="hero-gradient block bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
                   exceptional.
                 </span>
 
               </h1>
 
-              <p className="mt-7 max-w-xl text-lg leading-8 text-white/55">
+              <p className="hero-copy mt-7 max-w-xl text-lg leading-8 text-white/55">
                 Explore automobiles available through GB Global Services.
                 Whether you&apos;re looking for a family vehicle, executive car,
                 SUV or utility vehicle, we&apos;re here to help you find the right
@@ -174,7 +173,7 @@ export default function AutomobilesPage() {
 
               <div className="absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-[120px]" />
 
-              <div className="relative mx-auto max-w-[600px] overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-blue-500/10">
+              <div className="hero-media relative mx-auto max-w-[600px] overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-blue-500/10">
 
                 <div className="relative h-[500px] overflow-hidden rounded-[28px]">
 
@@ -195,7 +194,7 @@ export default function AutomobilesPage() {
                       AUTOMOBILE COLLECTION
                     </p>
 
-                    <h2 className="mt-2 text-3xl font-bold">
+                    <h2 className="mt-2 mb-5 text-3xl font-bold">
                       Your next drive starts here.
                     </h2>
 
@@ -207,7 +206,7 @@ export default function AutomobilesPage() {
 
 
               {/* FLOATING CARD */}
-              <div className="absolute -bottom-6 -left-4 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-4 shadow-2xl backdrop-blur-xl sm:left-0">
+              <div className="hero-panel absolute -bottom-6 -left-4 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-4 shadow-2xl backdrop-blur-xl sm:left-0">
 
                 <div className="flex items-center gap-3">
 
@@ -239,7 +238,6 @@ export default function AutomobilesPage() {
 
       </section>
 
-
       {/* VEHICLE COLLECTION */}
       <section
         id="vehicles"
@@ -268,17 +266,17 @@ export default function AutomobilesPage() {
 
 
           {/* VEHICLE GRID */}
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
 
             {vehicles.map((vehicle) => (
 
               <div
                 key={vehicle.name}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-white/[0.05]"
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-white/[0.05] sm:rounded-3xl"
               >
 
                 {/* IMAGE */}
-                <div className="relative h-72 overflow-hidden">
+                <div className="relative h-52 overflow-hidden sm:h-72">
 
                   <Image
                     src={vehicle.image}
@@ -290,7 +288,7 @@ export default function AutomobilesPage() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent" />
 
-                  <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] font-bold tracking-widest backdrop-blur">
+                  <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-rose-50 text-[10px] font-bold tracking-widest backdrop-blur">
                     {vehicle.category}
                   </span>
 
@@ -298,19 +296,19 @@ export default function AutomobilesPage() {
 
 
                 {/* CONTENT */}
-                <div className="p-7">
+                <div className="p-4 sm:p-7">
 
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-base font-bold sm:text-xl">
                     {vehicle.name}
                   </h3>
 
-                  <p className="mt-3 min-h-[72px] text-sm leading-6 text-white/45">
+                  <p className="mt-2 text-xs leading-5 text-white/45 sm:mt-3 sm:min-h-[72px] sm:text-sm sm:leading-6">
                     {vehicle.description}
                   </p>
 
-                  <div className="mt-6 flex items-center justify-between">
+                  <div className="mt-4 flex items-center justify-between gap-2 sm:mt-6">
 
-                    <span className="text-sm font-semibold text-cyan-300">
+                    <span className="text-[10px] font-semibold text-cyan-300 sm:text-sm">
                       View Availability
                     </span>
 
@@ -320,7 +318,7 @@ export default function AutomobilesPage() {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold transition hover:bg-white/10"
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-[10px] font-semibold transition hover:bg-white/10 sm:px-4 sm:text-xs"
                     >
                       WhatsApp →
                     </a>
@@ -338,7 +336,6 @@ export default function AutomobilesPage() {
         </div>
 
       </section>
-
 
       {/* FEATURE SECTION */}
       <section className="border-t border-white/10 px-6 py-24 lg:px-8">
@@ -368,7 +365,7 @@ export default function AutomobilesPage() {
                     GB GLOBAL AUTOMOBILES
                   </p>
 
-                  <p className="mt-2 text-2xl font-bold">
+                  <p className="mt-2 text-2xl font-bold text-rose-50">
                     Move with confidence.
                   </p>
 
@@ -442,10 +439,8 @@ export default function AutomobilesPage() {
 
       </section>
 
-
       {/* BENEFITS */}
       <section className="border-t border-white/10 px-6 py-24 lg:px-8">
-
         <div className="mx-auto max-w-7xl">
 
           <div className="text-center">
@@ -497,10 +492,8 @@ export default function AutomobilesPage() {
 
       </section>
 
-
       {/* CTA */}
       <section className="border-t border-white/10 px-6 py-28 lg:px-8">
-
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[36px] border border-blue-400/20 bg-gradient-to-br from-blue-500/15 via-white/[0.03] to-cyan-500/10 px-6 py-16 text-center sm:px-12">
 
           <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-[100px]" />

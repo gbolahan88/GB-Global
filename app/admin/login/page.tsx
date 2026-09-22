@@ -41,7 +41,7 @@ export default function AdminLoginPage() {
 
       <div className="w-full max-w-md">
 
-        <div className="mb-8 text-center">
+        <div className="mt-10 mb-8 text-center">
 
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-blue-500 to-cyan-400 text-xl font-black shadow-xl shadow-blue-500/20">
             GB

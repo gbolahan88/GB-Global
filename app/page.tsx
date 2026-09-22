@@ -46,7 +46,7 @@ export default function Home() {
       {/* HERO */}
       <section
         id="home"
-        className="relative flex min-h-screen items-center pt-10"
+        className="hero-section relative flex min-h-screen items-center pt-30"
       >
         {/* Background glow */}
         <div className="absolute left-1/2 top-1/3 h-125 w-125 -translate-x-1/2 rounded-full bg-blue-600/20 blur-[120px]" />
@@ -56,7 +56,7 @@ export default function Home() {
         <div className="absolute left-50 bottom-25 h-100 w-100 rounded-full bg-purple-600/10 blur-[120px]" />
 
         {/* Hero content */}
-        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-16 px-6 py-24 lg:grid-cols-2 lg:px-8">
+        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-16 px-6 py-6 lg:grid-cols-2 lg:px-8">
           {/* LEFT CONTENT */}
           <div>
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-2">
@@ -71,12 +71,12 @@ export default function Home() {
               Building Ideas.
               <br />
 
-              <span className="bg-linear-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
+              <span className="hero-gradient bg-linear-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
                 Creating Possibilities.
               </span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-lg leading-8 text-white/60">
+            <p className="hero-copy mt-7 max-w-xl text-lg leading-8 text-white/60">
               GB Global Services LTD is a diversified company delivering
               technology solutions, automobiles, mobile devices, pet trading,
               exchange services, and more.
@@ -143,7 +143,7 @@ export default function Home() {
               <div className="absolute inset-32 rounded-full border border-white/5" />
 
               {/* CENTER CARD */}
-              <div className="absolute left-1/2 top-1/2 z-20 flex h-60 w-60 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-[42px] border border-white/15 bg-[#0b1125]/90 shadow-2xl shadow-blue-500/20 backdrop-blur-xl">
+              <div className="hero-panel absolute left-1/2 top-1/2 z-20 flex h-60 w-60 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-[42px] border border-white/15 bg-[#0b1125]/90 shadow-2xl shadow-blue-500/20 backdrop-blur-xl">
 
                 <div className="relative h-32 w-32 overflow-hidden rounded-[28px] border border-white/20 shadow-xl shadow-blue-500/20">
                   <Image
@@ -165,7 +165,7 @@ export default function Home() {
               </div>
 
               {/* TECHNOLOGY CARD */}
-              <div className="absolute left-0 top-8 z-30 w-36 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
+              <div className="hero-panel absolute left-0 top-8 z-30 w-36 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
 
                 <div className="relative h-28 w-full overflow-hidden rounded-xl">
                   <Image
@@ -187,7 +187,7 @@ export default function Home() {
               </div>
 
               {/* AUTOMOBILE CARD */}
-              <div className="absolute right-0 top-12 z-30 w-36 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
+              <div className="hero-panel absolute right-0 top-12 z-30 w-36 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
 
                 <div className="relative h-28 w-full overflow-hidden rounded-xl">
                   <Image
@@ -209,7 +209,7 @@ export default function Home() {
               </div>
 
               {/* GADGET CARD */}
-              <div className="absolute bottom-32 left-0 z-30 w-36 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
+              <div className="hero-panel absolute bottom-32 left-0 z-30 w-36 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
 
                 <div className="relative h-28 w-full overflow-hidden rounded-xl">
                   <Image
@@ -231,7 +231,7 @@ export default function Home() {
               </div>
 
               {/* EXCHANGE CARD */}
-              <div className="absolute bottom-[-40] left-1/2 z-30 w-36 -translate-x-1/2 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
+              <div className="hero-panel absolute bottom-[-40] left-1/2 z-30 w-36 -translate-x-1/2 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
 
                 <div className="relative h-28 w-full overflow-hidden rounded-xl">
                   <Image
@@ -253,7 +253,7 @@ export default function Home() {
               </div>
 
               {/* PET CARD */}
-              <div className="absolute right-0 top-2/3 z-30 w-36 -translate-y-1/2 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
+              <div className="hero-panel absolute right-0 top-2/3 z-30 w-36 -translate-y-1/2 rounded-2xl border border-white/10 bg-[#0b1125]/95 p-3 shadow-2xl shadow-blue-500/10 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400/30">
 
                 <div className="relative h-28 w-full overflow-hidden rounded-xl">
                   <Image
@@ -441,7 +441,7 @@ export default function Home() {
                 ].map((feature) => (
                   <div
                     key={feature.number}
-                    className="rounded-2xl border border-white/10 bg-black/20 p-5"
+                    className="feature-card rounded-2xl border border-white/10 bg-black/20 p-5"
                   >
                     <span className="text-xs font-bold text-cyan-400">
                       {feature.number}

@@ -14,7 +14,7 @@ const links = [
 export default function Footer() {
   return (
     <footer className="site-footer border-t border-white/10 bg-[#03050f]">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
           {/* Company */}
@@ -23,8 +23,8 @@ export default function Footer() {
               <Image
                 src={logo}
                 alt="GB Global logo"
-                width={300}
-                height={300}
+                width={150}
+                height={150}
                 className="theme-logo h-auto w-auto object-cover"
               />
             </div>
@@ -88,7 +88,7 @@ export default function Footer() {
 
             <div className="mt-5 space-y-3 text-sm text-white/50">
               <p>+234 813 949 8576</p>
-              <p>onigbolahan6@gmail.com</p>
+              <p>gbglobalservicesltd@gmail.com</p>
               <p>Osun, Nigeria</p>
             </div>
 

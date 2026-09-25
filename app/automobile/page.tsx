@@ -33,7 +33,7 @@ const vehicles = [
     description:
       "Reliable utility vehicles designed for business operations, transportation and demanding tasks.",
     image:
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d8?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTB8fHRydWNrfGVufDB8fDB8fHww",
   },
   {
     name: "Executive Vehicles",
@@ -272,7 +272,7 @@ export default function AutomobilesPage() {
 
               <div
                 key={vehicle.name}
-                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-white/[0.05] sm:rounded-3xl"
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/3 transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-white/[0.05] sm:rounded-3xl"
               >
 
                 {/* IMAGE */}
@@ -286,7 +286,7 @@ export default function AutomobilesPage() {
                     className="object-cover transition duration-700 group-hover:scale-110"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#050816] via-transparent to-transparent" />
 
                   <span className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-rose-50 text-[10px] font-bold tracking-widest backdrop-blur">
                     {vehicle.category}

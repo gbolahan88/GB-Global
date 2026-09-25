@@ -56,7 +56,8 @@ export default function ThemeToggle() {
       title={`Switch to ${isDark ? "light" : "dark"} mode`}
       className="theme-toggle flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-base text-white/75 transition hover:bg-white/10 hover:text-white"
     >
-      <span aria-hidden="true">{isDark ? "☀" : "☾"}</span>
+      <span aria-hidden="true">{isDark ? "💡" : "☾"}</span>
     </button>
   );
 }
+// ☀ ☾

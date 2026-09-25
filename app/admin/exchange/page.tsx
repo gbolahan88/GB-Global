@@ -165,9 +165,7 @@ export default function ExchangeManagementPage() {
 
     setSaving(true);
 
-    /* =====================================================
-       EDIT EXISTING PRODUCT
-    ===================================================== */
+    /* ==========EDIT EXISTING PRODUCT============== */
 
     if (editingId) {
       const { error } = await supabase
@@ -410,7 +408,7 @@ export default function ExchangeManagementPage() {
             <ProductSection
               title="Gift Cards"
               subtitle="Gift cards and digital vouchers"
-              icon="🎁"
+              icon="💳"
               products={giftCards}
               onAdd={() => openAddModal("giftcard")}
               onEdit={openEditModal}
@@ -509,7 +507,7 @@ export default function ExchangeManagementPage() {
                   >
 
                     <div className="text-2xl">
-                      🎁
+                      💳
                     </div>
 
                     <p className="mt-3 text-sm font-bold">
@@ -875,8 +873,7 @@ function ProductRow({
 }) {
   return (
     <div className="p-5 transition hover:bg-white/2">
-
-      <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+      <div className="grid grid-cols-1 items-center gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_auto]">
 
         {/* PRODUCT INFO */}
 
@@ -886,7 +883,7 @@ function ProductRow({
 
             {product.category === "crypto"
               ? "₿"
-              : "🎁"}
+              : "💳"}
 
           </div>
 
@@ -920,12 +917,11 @@ function ProductRow({
 
         </div>
 
-        {/* RATE */}
+        {/* RATE*/}
 
-        <div className="lg:min-w-45 lg:text-right">
-
-          <p className="text-xl font-black text-cyan-300">
-            ₦{Number(product.rate).toLocaleString("en-NG")}
+        <div className="text-left">
+          <p className="text-lg font-black text-cyan-300 sm:text-xl">
+            ₦ {Number(product.rate).toLocaleString("en-NG")}
           </p>
 
           <p className="mt-1 text-[10px] text-white/25">
@@ -936,7 +932,7 @@ function ProductRow({
 
         {/* ACTIONS */}
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 lg:justify-end">
 
           <button
             onClick={() => onEdit(product)}

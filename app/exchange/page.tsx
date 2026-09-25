@@ -173,11 +173,11 @@ export default function ExchangePage() {
 
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
 
-        <div className="absolute left-1/4 top-20 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[140px]" />
+        <div className="absolute left-1/4 top-20 h-125 w-125 rounded-full bg-blue-600/10 blur-[140px]" />
 
-        <div className="absolute right-0 top-[35%] h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[140px]" />
+        <div className="absolute right-0 top-[35%] h-125 w-125 rounded-full bg-cyan-500/10 blur-[140px]" />
 
-        <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-purple-600/10 blur-[140px]" />
+        <div className="absolute bottom-0 left-1/3 h-100 w-100 rounded-full bg-purple-600/10 blur-[140px]" />
 
       </div>
 
@@ -205,7 +205,7 @@ export default function ExchangePage() {
 
               Exchange.
 
-              <span className="hero-gradient block bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
+              <span className="hero-gradient block bg-linear-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
                 Simple. Fast. Direct.
               </span>
 
@@ -237,7 +237,7 @@ export default function ExchangePage() {
                 LEFT - CALCULATOR
             ================================================= */}
 
-            <div className="rounded-[24px] border border-white/10 bg-white/[0.04] p-4 shadow-2xl backdrop-blur-xl sm:p-6 lg:p-10">
+            <div className="rounded-3xl border border-white/10 bg-white/4 p-4 shadow-2xl backdrop-blur-xl sm:p-6 lg:p-10">
 
               <div className="mb-6 sm:mb-8">
 
@@ -279,7 +279,7 @@ export default function ExchangePage() {
                   >
 
                     <div className="text-xl sm:text-2xl">
-                      🎁
+                      💳
                     </div>
 
                     <p className="mt-2 font-bold sm:mt-3">

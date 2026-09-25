@@ -284,11 +284,11 @@ export default function GadgetShopPage() {
               AVAILABLE PRODUCTS
             </p>
 
-            <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
+            <h2 className="mt-5 text-2xl font-bold tracking-tight sm:text-5xl">
               Explore our collection.
             </h2>
 
-            <p className="mt-5 leading-7 text-white/45">
+            <p className="mt-5 leading-7 text-white/45 text-sm sm:text-xl">
               Browse our available gadgets and contact us directly for
               current pricing, specifications and availability.
             </p>
